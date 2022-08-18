@@ -1,0 +1,1253 @@
+@import url('https://fonts.googleapis.com/css2?family=Fascinate&family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto+Mono:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+/* HEADER */
+
+
+.header {
+    background-color: rgb(28, 28, 28);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo a {
+    font-size: 2.3em;
+    text-decoration: none;
+    color: #ffffff;
+    padding: 18px;
+    font-family: 'Lobster', cursive;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav li {
+    padding: 11px;
+    margin-right: 8px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+
+/* HOME */
+
+
+.container-home-grid {
+    display: grid;
+
+    grid-template-areas:
+        "header header header header"
+        "main main main main"
+        "footer footer footer footer"
+    ;
+    height: 100vh;
+    width: 100vw;
+}
+
+.header-home-grid {
+    grid-area: header;
+    background-color: rgb(28, 28, 28);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.main-home-grid {
+    grid-area: main;
+    height: 95vh;
+    background-image: url(https://res.cloudinary.com/federicog/image/upload/v1660351317/my-proyect-css/main-background_qymp6v.jpg);
+    background-color: rgba(0, 0, 0, .4);
+    background-blend-mode: soft-light;
+    display: flex;
+}
+
+.footer-home-grid {
+    grid-area: footer;
+}
+
+.container-home-text {
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    color: white;
+    width: 500px;
+    font-size: 1.6em;
+    margin-left: 100px;
+    margin-top: 300px;
+}
+
+/* SHOP */
+
+
+.container-shop-grid {
+    display: grid;
+
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        "sec-header sec-header sec-header"
+        "section-one section-two section-three"
+        "footer footer footer";
+    height: 100vh;
+}
+
+.header-shop-grid {
+    grid-area: header;
+    background-color: rgb(28, 28, 28);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.main-shop-grid {
+    grid-area: main;
+    display: flex;
+    height: 700px;
+    font-size: 3em;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(https://res.cloudinary.com/federicog/image/upload/v1660351309/my-proyect-css/welcome-background.jpg);
+    background-blend-mode: soft-light;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+
+.go-to-buy {
+    font-weight: bold;
+    width: 100px;
+    height: 32px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: black;
+}
+
+.second-header-shop-grid {
+    grid-area: sec-header;
+    background-color: darkblue;
+}
+
+.basic-section-shop {
+    grid-area: section-one;
+    background-color: white;
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.silver-section-shop {
+    grid-area: section-two;
+    background-color: rgb(238, 237, 237);
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gold-section-shop {
+    grid-area: section-three;
+    background-color: white;
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.basic-section { 
+    height: 620px;
+    border: 3px solid black;
+    width: 380px;
+    position: absolute;
+    box-shadow: 4px 4px 8px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.basic-h2 {
+    padding-bottom: 180px;
+    text-align: center;
+}
+
+.basic-ul {
+    padding-bottom: 100px;
+    bottom: 140px;
+    position: relative;
+    font-size: 1.25em;
+}
+
+.basic-section li {
+    list-style-type: none;
+}
+
+.basic-buy {
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.basic-section h2 {
+    text-shadow: 1px 1px 1px black;
+}
+
+
+.silver-section {
+    height: 620px;
+    border: 3px solid black;
+    width: 380px;
+    position: absolute;
+    box-shadow: 4px 4px 8px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+.silver-section h2 {
+    text-shadow: 1px 1px 1px black;
+}
+
+.silver-color {
+    color: rgb(122, 121, 121);
+}
+
+.silver-h2 {
+    padding-bottom: 180px;
+    text-align: center;
+}
+
+.silver-ul {
+    padding-bottom: 100px;
+    bottom: 140px;
+    position: relative;
+    font-size: 1.25em;
+}
+
+.silver-section li {
+    list-style-type: none;
+}
+
+.silver-buy {
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.gold-section { 
+    height: 620px;
+    border: 3px solid black;
+    position: absolute;
+    box-shadow: 4px 4px 8px black;
+    width: 380px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 20px;
+}
+
+.gold-section h2 {
+    text-shadow: 1px 1px 1px black;
+}
+
+.gold-color {
+    color: #fff714;
+    font-weight: bold;
+}
+
+.gold-h2 {
+    padding-bottom: 180px;
+    text-align: center;
+}
+
+.gold-ul {
+    padding-bottom: 100px;
+    bottom: 140px;
+    position: relative;
+    font-size: 1.25em;
+}
+
+.gold-section li {
+    list-style-type: none;
+}
+
+.gold-buy {
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 60px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.check-green {
+    color: green;
+}
+
+.check-red {
+    color: red;
+}
+
+.shop-price {
+    color: red;
+    font-weight: bold;
+}
+
+.button-shop {
+    padding: 4px;
+    margin: 5px;
+    border-radius: 15px;
+    background-color: rgb(162, 239, 47);
+    font-weight: bold;
+    box-shadow: 1px 1px 1px black;
+    width: 120px;
+    cursor: pointer;
+}
+
+.footer-shop-grid {
+    grid-area: footer;
+}
+
+
+.shop-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: black;
+    color: white;
+    font-size: 1em;
+}
+
+.shop-nav {
+    display: flex;
+}
+
+.shop-nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.shop-nav li {
+    padding: 10px;
+}
+
+.shop-nav a {
+    text-decoration: none;
+    color: white;
+}
+
+/* COURSES */
+
+
+#courses {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 600px;
+    text-shadow: 1px;
+    background-image: url(https://res.cloudinary.com/federicog/image/upload/v1660351311/my-proyect-css/courses-background.jpg);
+    background-color: rgba(0, 0, 0, 0.8);
+    background-blend-mode: soft-light;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container-cards {
+    text-align: center;
+}
+
+#courses h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: white;
+}
+
+#courses h3 {
+    font-size: 21px;
+    color: white;
+}
+
+#courses p {
+    color: rgb(239, 93, 93);
+}
+
+.card:nth-child(1) {
+    background-color: #3b5999;
+    border: double white 2px;
+    background-image: url(https://res.cloudinary.com/federicog/image/upload/v1660351309/my-proyect-css/ch-courses.jpg);
+    background-repeat: no-repeat;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: soft-light;
+    background-size: cover;
+    background-position: 70%;
+    border-radius: 18px;
+}
+
+.card:nth-child(2) {
+    background-color: #3b5999;
+    border: double white 2px;
+    border-radius: 18px;
+    background-image: url(https://res.cloudinary.com/federicog/image/upload/v1660351309/my-proyect-css/am-courses.png);
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: soft-light;
+    background-size: cover;
+}
+
+#courses .card {
+    padding: 30px 0px;
+    margin: 15px;
+}
+
+.container-h1-cards {
+    padding-top: 40px;
+    padding-bottom: 30px;
+}
+
+.card-button {
+    margin-top: 10px;
+    width: 60px;
+    height: 35px;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    cursor: hand;
+}
+
+
+.card-button a {
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+
+
+.coder-house {
+    width: 100%;
+    height: 800px;
+    background-color: #0b0b0b;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.coder-house h2 {
+    margin-top: 40px;
+}
+
+.coder-house-img-text {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 80px;
+}
+
+.coder-house-img {
+    width: 360px;
+    height: 400px;
+    background-image: url(https://res.cloudinary.com/federicog/image/upload/v1660351309/my-proyect-css/ch-courses.jpg);
+    background-image: cover;
+    background-position-x: center;
+    background-position-y: center;
+    border-radius: 20px;
+}
+
+.coder-house-text {
+    width: 360px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+    font-size: 1em;
+}
+
+.pilas-baby {
+    width: 100%;
+    height: 800px;
+    background-color: #f4f4f4;
+    color: black;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.pilas-baby h2 {
+    padding-top: 40px;
+}
+
+.pilas-baby-img-text {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 80px;
+    flex-direction: row-reverse;
+}
+
+.pilas-baby-text {
+    width: 360px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    padding-right: 30px;
+    font-size: 1em;
+}
+
+.pilas-baby-img {
+    width: 400px;
+    height: 400px;
+    background-image: url(https://res.cloudinary.com/federicog/image/upload/v1660351309/my-proyect-css/am-courses.png);
+    background-image: cover;
+    background-position-x: center;
+    background-position-y: center;
+    border-radius: 20px;
+    position: relative;
+}
+
+.pilasbaby-p {
+    color: red;
+    font-weight: bold;
+}
+
+.coderhouse-p {
+    color: red;
+}
+
+/* PERSONAL */
+
+
+.personal-container {
+    background-color: #111111;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    padding-top: 20px;
+}
+
+.personal-container a {
+    text-decoration: none;
+}
+
+.personal-select {
+    width: 365px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    color: white;
+    border: white solid 2px;
+    border-radius: 8px;
+    margin: 1px;
+}
+
+
+.physical {
+    background-image: url(https://res.cloudinary.com/federicog/image/upload/v1660351309/my-proyect-css/about-img.jpg);
+    background-color: rgba(0, 0, 0, .42);
+    background-blend-mode: soft-light;
+}
+
+.personal-container .mental {
+    background-image: url(https://res.cloudinary.com/federicog/image/upload/v1660351317/my-proyect-css/mental.jpg);
+    background-color: rgba(0, 0, 0, .42);
+    background-size: cover;
+    background-blend-mode: soft-light;
+}
+
+.personal-container .expressive {
+    background-image: url(https://res.cloudinary.com/federicog/image/upload/v1660351309/my-proyect-css/courses-coderhouse.jpg);
+    background-color: rgba(0, 0, 0, .42);
+    background-size: cover;
+    background-blend-mode: soft-light;
+
+}
+
+.personal-container .occupational {
+    background-image: url(https://res.cloudinary.com/federicog/image/upload/v1660351309/my-proyect-css/occupational.jpg);
+    background-color: rgba(0, 0, 0, .42);
+    background-size: cover;
+    background-blend-mode: soft-light;
+}
+
+.personal-select h3 {
+    font-size: 25px;
+    text-shadow: 2px black;
+    margin-bottom: 6px;
+    text-shadow: black 2px 2px;
+}
+.personal-physical {
+    width: 100%;
+    height: 900px;
+    background-color: #111111;
+    color: white;
+}
+
+.personal-mental {
+    width: 100%;
+    height: 900px;
+    background-color: #f4f4f4;
+    color: white;
+}
+
+.personal-expressive {
+    width: 100%;
+    height: 800px;
+    background-color: #111111;
+    color: white;
+}
+
+.personal-occupational {
+    width: 100%;
+    height: 800px;
+    background-color: #111111;
+    color: white;
+}
+
+
+/* PERSONAL-PHYSICAL */
+
+
+.personal-physical {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.personal-physical-img {
+    width: 500px;
+    height: 400px;
+    background-image: url(https://res.cloudinary.com/federicog/image/upload/v1660351309/my-proyect-css/about-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+.personal-physical-text {
+    width: 400px;
+    height: 400px;
+    padding-left: 30px;
+}
+
+
+/* PERSONAL-MENTAL */
+
+
+.personal-mental {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+.personal-mental-img {
+    width: 500px;
+    height: 400px;
+    background-image: url(https://res.cloudinary.com/federicog/image/upload/v1660351317/my-proyect-css/mental.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+}
+
+.personal-mental-text {
+    width: 400px;
+    height: 400px;
+    padding-right: 30px;
+    color: black;
+}
+
+
+/* PERSONAL-EXPRESSIVE */
+
+
+.personal-expressive {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row
+}
+
+.personal-expressive-text, .personal-expressive-text-two {
+    width: 450px;
+    height: 450px;
+    padding-right: 30px;
+    color: white;
+    flex-direction: row;
+    font-size: 18px;
+}
+
+
+/* PERSONAL-OCCUPATIONAL */
+
+
+.personal-occupational {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(124, 23, 23);
+    flex-direction: column;
+}
+
+.personal-occupational-text {
+    width: 900px;
+    height: 170px;
+    padding-right: 30px;
+    color: white;
+    font-size: 18px;
+    text-align: center;
+}
+
+.occupational-img-one {
+    width: 380px;
+    height: 300px;
+    border-radius: 20px;
+    margin-right: 15px;
+}
+
+.occupational-img-two {
+    width: 380px;
+    height: 300px;
+    border-radius: 20px;
+}
+
+
+/* CONTACT */
+
+
+.background-image {
+    height: 900px;
+    background-image: url(https://res.cloudinary.com/federicog/image/upload/v1660351310/my-proyect-css/contact-backgroundimg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.contact-container {
+    font-size: 25px;
+    background-color: rgba(0, 0, 0, .75);
+    width: 420px;
+    height: 420px;
+    border: 7px solid black;
+}
+
+.contact-container h2 {
+    padding-bottom: 30px;
+    font-size: 35px;
+    color: white;
+    text-shadow: black 2px 2px;
+    padding-top: 20px;
+}
+
+.contact-base {
+    padding: 3px;
+    border: solid black 2px;
+    border-radius: 5px;
+}
+
+.contact-base::placeholder {
+    content: Name;
+}
+
+.contact-message {
+    padding: 3px;
+    border: solid black 2px;
+    border-radius: 5px;
+}
+
+.contact-menu {
+    padding: 3px;
+    border: solid black 2px;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.contact-option {
+    color: black;
+    font-weight: bold;
+}
+
+.contact-button {
+    padding: 10px;
+    font-weight: bold;
+    background-color: white;
+    border-radius: 5px;
+}
+
+.contact-button {
+    cursor: pointer;
+    cursor: hand;
+}
+
+
+
+
+
+/* FOOTER */
+
+
+.footer {
+    background-color: rgb(28, 28, 28);
+    color: white;
+    text-align: center;
+    padding-top: 28px;
+    font-size: 1em;
+    height: 140px;
+}
+
+.footer,
+.moreinfo a {
+    color: rgb(237, 120, 120);
+}
+
+.socialmedia {
+    color: white;
+    padding: 2px;
+    font-size: 1.3em;
+}
+
+
+.footer-copyright {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+@keyframes main-text {
+    0% {
+        opacity: 0;
+
+
+    }
+
+    100% {
+        opacity: 1;
+        color: white;
+    }
+}
+
+
+@media (max-width: 1500px) {
+        .personal-select {
+            width: 320px;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            flex-wrap: wrap;
+            color: white;
+            border: white solid 2px;
+            border-radius: 8px;
+            margin: 1px;
+        } 
+}
+
+
+@media (max-width: 1333px) {
+    .container-shop-grid {
+        width: 100vw;
+        grid-template-areas:
+            "header header header header"
+            "main main main main"
+            "sec-header sec-header sec-header sec-header"
+            "section-one section-one section-two section-two"
+            "section-three section-three section-three section-three"
+            "footer footer footer footer";
+    }
+
+    .basic-section-shop {
+        background-color: rgb(238, 237, 237);
+    }
+
+    .gold-section-shop {
+        background-color: rgb(199, 200, 201);
+    }
+
+    .basic-section,
+    .silver-section,
+    .gold-section {
+        background-color: white;
+    }
+    .personal-select {
+        width: 320px;
+        height: 250px;
+        margin: 10px;
+    } 
+    .personal-container {
+        flex-wrap: wrap;
+    }
+
+    .personal-occupational-text {
+        width: 600px;
+    }
+    .occupational-img-one, .occupational-img-two {
+        position: relative;
+        top: 70px;
+    }
+}
+@media (max-width: 950px) {
+
+    .personal-physical-img {
+        width: 0;
+    }
+
+    .personal-mental-img {
+        width: 320px;
+        height: 320px;
+    }
+
+    .personal-expressive-text {
+        width: 400px;
+    }
+    
+    .personal-expressive-text-two {
+        font-size: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .personal-occupational {
+        height: 900px;
+        justify-content: flex-start;
+    }
+
+    .occupational-img-two {
+        width: 0;
+    }
+
+    .occupational-img-one {
+        width: 0;
+    }
+
+    .personal-occupational-text {
+        width: 370px;
+        padding-top: 200px;
+    }
+
+    
+}
+
+@media (max-width: 768px) {
+
+    .header-home-grid,
+    .header-shop-grid,
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        margin-top: 5px;
+    }
+
+    .container-home-text {
+        width: 380px;
+        font-size: 1.2em;
+        margin-left: 40px;
+    }
+
+    .main-shop-grid {
+        height: 600px;
+        font-size: 2.5em;
+    }
+
+    .basic-section-shop {
+        background-color: rgb(175, 168, 168);
+    }
+
+    .container-shop-grid {
+        grid-template-areas:
+            "header header header"
+            "main main main"
+            "sec-header sec-header sec-header"
+            "section-one section-one section-one"
+            "section-two section-two section-two"
+            "section-three section-three section-three"
+            "footer footer footer";
+        width: 100vw;
+    }
+
+    .main-shop-grid {
+        font-size: 1.80em;
+    }
+
+    .coder-house-img {
+        width: 0px;
+        height: 0px;
+    }
+
+    .pilas-baby-img-text {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+    }
+
+    .pilas-baby {
+        height: 1000px;
+    }
+
+    .pilas-baby-text {
+        width: 400px;
+        padding-right: 0px;
+    }
+
+    .pilas-baby-img {
+        width: 370px;
+        height: 350px;
+    }
+
+    .personal-select {
+        width: 500px;
+        height: 150px;
+        margin: 10px;
+    } 
+
+    .personal-physical { 
+        height: 1000px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .personal-mental {
+        flex-direction: column; 
+        height: 1200px;
+    }
+
+    .personal-occupational {
+        height: 850px;
+        justify-content: flex-start;
+    }
+
+    .personal-physical-img {
+        width: 0;
+    }
+
+    .personal-mental-text{
+        width: 400px;
+        height: 400px;
+        padding-top: 20px;
+        text-align: center;
+        padding-right: 0px;
+    }
+
+    .personal-mental-img {
+        width: 400px;
+        height: 400px;
+    }
+
+    .personal-expressive-text {
+        width: 450px;
+        height: 450px;
+        padding-right: 0px;
+        color: white;
+        flex-direction: row;
+        font-size: 16px;
+        text-align: center;
+        padding-left: 15px;
+    }
+
+    .personal-expressive-text-two {
+        font-size: 0;
+        width: 0;
+        height: 0;
+    }
+
+    .personal-occupational-text {
+        width: 600px;
+        padding-top: 200px;
+        padding-right: 0;
+    }
+    .occupational-img-one {
+        top: 440px;
+        position: relative;
+        margin-right: 0;
+    }
+    .occupational-img-two {
+        width: 0;
+        height: 0;
+    }
+
+    .personal-occupational-text {
+        width: 370px;
+        padding-top: 200px;
+    }
+
+}
+
+    @media (max-width: 550px) {
+        .personal-select {
+            width: 320px;
+            height: 150px;
+            margin: 10px;
+        } 
+    }
+
+    @media (max-width: 450px) {
+
+        .container-home-grid {
+            display: grid;
+
+            width: 100vw;
+            grid-template-areas:
+                "header header header header"
+                "main main main main"
+                "footer footer footer footer"
+            ;
+        }
+        
+        .header {
+            flex-direction: column;
+        }
+
+        nav ul {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        nav li {
+            padding: 7px;
+        }
+
+        .home-li {
+            font-size: 0;
+            padding: 0;
+        }
+
+        .main-shop-grid {
+            font-size: 1.3em;
+        }
+
+        .basic-section, .silver-section, .gold-section{
+            width: 300px;
+        } 
+
+        .coder-house-text {
+            width: 250px;
+            height: 700px;
+        }
+
+        .coder-house {
+            height: 1000px;
+        }
+
+        .pilas-baby-text {
+            width: 280px;
+            padding-right: 0px;
+        }
+
+        .pilas-baby-img {
+            width: 280px;
+            height: 280px;
+            margin-bottom: 20px;
+        }
+
+        .personal-select {
+            width: 295px;
+            height: 140px;
+            margin: 10px;
+            
+        } 
+
+        .personal-physical {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .personal-mental {
+            flex-direction: column; 
+            height: 1300px;
+            justify-content: flex-start;
+        }
+
+        .personal-expressive {
+            height: 1000px;
+            align-items: flex-start;
+        }
+
+        .personal-occupational {
+            justify-content: flex-start;
+            height: 700px;
+        }
+
+        .personal-physical-text {
+            width: 300px;
+            padding-left: 0;
+            padding-top: 150px;
+        }
+
+        .personal-mental-img {
+            width: 300px;
+            height: 300px;
+            margin-top: 200px;
+        }
+
+        .personal-mental-text{
+            width: 300px;
+            height: 300px;
+            padding-top: 20px;
+            text-align: center;
+            padding-right: 0;
+        }
+
+        .personal-expressive-text {
+            padding-left: 30px;
+            padding-top: 150px;
+        }
+
+        .occupational-img-two {
+            width: 0;
+            height: 0;
+        }
+        .occupational-img-one {
+            width: 0
+        }
+        .personal-occupational-text {
+            padding-right: 0;
+            padding-top: 150px;
+            width: 300px;
+            height: 300px;
+        }
+        .contact-container {
+            width: 300px;
+        }
+}
