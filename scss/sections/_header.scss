@@ -1,0 +1,61 @@
+// Header
+
+
+$main-black: rgb(28, 28, 28);
+$personal-black: #111111;
+$top-red: rgb(237, 120, 120);
+
+.header {
+    .logo a {
+        font-size: 2.3em;
+        text-decoration: none;
+        color: white;
+        padding: 18px;
+        font-family: 'Lobster', cursive;
+    }
+
+    .navbar {
+        --bs-navbar-color: white;
+        --bs-navbar-hover-color: rgb(237, 120, 120);
+        --bs-navbar-brand-color: white;
+        --bs-navbar-brand-hover-color: rgb(237, 120, 120);
+    }
+
+    .bg-light {
+        background-color: $main-black !important;
+    }
+
+    .navbar-toggler {
+        background-color: white;
+        color: black;
+    }
+
+    .navbar-collapse {
+        justify-content: end;
+        font-size: 1.2em;
+
+        .nav-link {
+            text-align: center;
+        }
+    }
+}
+
+
+
+// Key-frames
+
+
+@keyframes main-text {
+    0% {
+        opacity: 0;
+
+
+    }
+
+    100% {
+        opacity: 1;
+        color: white;
+    }
+}
+
+

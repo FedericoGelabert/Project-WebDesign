@@ -1,0 +1,53 @@
+// Home
+
+.container-home-grid {
+    display: grid;
+
+    grid-template-areas:
+        "header header header header"
+        "main main main main"
+        "footer footer footer footer"
+    ;
+    height: 100vh;
+    width: 100vw;
+}
+
+.header-home-grid {
+    grid-area: header;
+    background-color: rgb(28, 28, 28);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.main-home-grid {
+    grid-area: main;
+    height: 95vh;
+    background-image: url(https://res.cloudinary.com/federicog/image/upload/v1660351317/my-proyect-css/main-background_qymp6v.jpg);
+    background-color: rgba(0, 0, 0, .4);
+    background-blend-mode: soft-light;
+    display: flex;
+    #home {
+    .container-home-text {
+        font-family: 'Roboto Mono', monospace;
+        font-weight: bold;
+        color: white;
+        width: 400px;
+        margin-left: 100px;
+        margin-top: 300px;
+        .home-text {
+            animation-name: main-text;
+            animation-iteration-count: 1;
+            animation-timing-function: ease-in;
+            animation-duration: 1.2s;
+            animation-delay: .3s;
+            opacity: 0;
+            animation-fill-mode: forwards;
+            }
+        }
+    }
+}
+
+.footer-home-grid {
+    grid-area: footer;
+}

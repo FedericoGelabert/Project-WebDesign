@@ -1,0 +1,495 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+// !important
+
+@import "./sections/typo";
+@import "./sections/header";
+@import "./sections/footer";
+
+// Pages
+
+@import "./sections/home";
+@import "./sections/shop";
+@import "./sections/courses";
+@import "./sections/personal";
+@import "./sections/contact";
+
+
+// Variables
+
+$main-black: rgb(28, 28, 28);
+$personal-black: #111111;
+$top-red: rgb(237, 120, 120);
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+button {
+    font-size: initial;
+}
+
+
+// Key-frames
+
+
+@keyframes main-text {
+    0% {
+        opacity: 0;
+
+
+    }
+
+    100% {
+        opacity: 1;
+        color: white;
+    }
+}
+
+
+
+// Media Querys
+
+
+@media (max-width: 1500px) {
+    .personal-select {
+        width: 320px;
+        height: 250px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        color: white;
+        border: white solid 2px;
+        border-radius: 8px;
+        margin: 1px;
+    }
+}
+
+@media (max-width: 1333px) {
+    .container-shop-grid {
+        width: 100vw;
+        grid-template-areas:
+            "header header header header"
+            "main main main main"
+            "sec-header sec-header sec-header sec-header"
+            "section-one section-one section-two section-two"
+            "section-three section-three section-three section-three"
+            "footer footer footer footer";
+    }
+
+    .basic-section-shop {
+        background-color: rgb(238, 237, 237);
+    }
+
+    .gold-section-shop {
+        background-color: rgb(199, 200, 201);
+    }
+
+    .basic-section,
+    .silver-section,
+    .gold-section {
+        background-color: white;
+    }
+
+    .personal-container {
+        flex-wrap: wrap;
+
+        .personal-select {
+            width: 320px;
+            height: 250px;
+            margin: 10px;
+        }
+    }
+
+    .personal-occupational {
+
+        .personal-occupational-text {
+            width: 600px;
+        }
+    }
+
+    .occupational-img-one,
+    .occupational-img-two {
+        position: relative;
+        top: 90px;
+    }
+}
+
+@media (max-width: 950px) {
+
+    .main-shop-grid {
+        .main-shop-text {
+            font-size: 4em !important;
+        }
+    }
+
+    .personal-physical-img {
+        width: 0;
+    }
+
+    .personal-mental-img {
+        width: 320px;
+        height: 320px;
+    }
+
+    .personal-expressive {
+
+        .personal-expressive-text {
+            width: 400px;
+        }
+
+        .personal-expressive-text-two {
+            font-size: 0;
+            width: 0;
+            height: 0;
+        }
+    }
+
+    .personal-occupational {
+        height: 900px;
+        justify-content: flex-start;
+
+        .personal-occupational-text {
+            width: 370px;
+            padding-top: 200px;
+        }
+    }
+
+    .occupational-img-two,
+    .occupational-img-one {
+        width: 0px !important;
+        height: 0px !important;
+    }
+
+
+}
+
+
+@media (max-width: 768px) {
+
+    .header-home-grid,
+    .header-shop-grid,
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .logo {
+        margin-top: 5px;
+    }
+
+    .main-home-grid {
+        #home {
+            .container-home-text {
+                width: 400px;
+                margin-left: 60px;
+                margin-top: 300px;
+            }
+        }
+    }
+
+    .main-shop-grid {
+        height: 600px;
+    }
+
+    .container-shop-grid {
+        grid-template-areas:
+            "header header header"
+            "main main main"
+            "sec-header sec-header sec-header"
+            "section-one section-one section-one"
+            "section-two section-two section-two"
+            "section-three section-three section-three"
+            "footer footer footer";
+        width: 100vw;
+    }
+
+    .basic-section-shop {
+        background-color: rgb(175, 168, 168);
+    }
+
+    .coder-house-img {
+        width: 0px !important;
+        height: 0px !important;
+    }
+
+    .pilas-baby {
+        height: 1000px;
+
+        .pilas-baby-img-text {
+            flex-direction: column;
+            align-items: center;
+            padding-top: 50px;
+        }
+
+        .pilas-baby-text {
+            width: 400px;
+            padding-right: 0px;
+        }
+
+        .pilas-baby-img {
+            width: 370px;
+            height: 350px;
+        }
+    }
+
+    .personal-select {
+        width: 500px;
+        height: 150px;
+        margin: 10px;
+    }
+
+    .personal-physical {
+        height: 900px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .personal-physical-img {
+        width: 0;
+    }
+
+    .personal-mental {
+        height: 1200px;
+        flex-direction: column;
+
+        .personal-mental-text {
+            width: 400px;
+            height: 400px;
+            padding-top: 20px;
+            text-align: center;
+            padding-right: 0px;
+        }
+    }
+
+    .personal-mental-img {
+        width: 400px;
+        height: 400px;
+    }
+
+    .personal-expressive {
+        height: 800px;
+        align-items: flex-start;
+
+        .personal-expressive-text {
+            width: 450px;
+            height: 450px;
+            padding-right: 0px;
+            color: white;
+            flex-direction: row;
+            font-size: 16px;
+            text-align: center;
+            padding-left: 15px;
+        }
+
+        .personal-expressive-text-two {
+            font-size: 0;
+            width: 0;
+            height: 0;
+        }
+    }
+
+    .personal-occupational {
+        height: 850px;
+        justify-content: flex-start;
+
+        .personal-occupational-text {
+            padding-right: 0;
+            width: 370px;
+            padding-top: 200px;
+        }
+    }
+
+    .images-occupational {
+        .occupational-img-one {
+            top: 440px;
+            position: relative;
+            margin-right: 0;
+        }
+
+        .occupational-img-two {
+            width: 0;
+            height: 0;
+        }
+    }
+
+}
+
+@media (max-width: 550px) {
+
+    .main-shop-grid {
+        .main-shop-text {
+            font-size: 2.6em !important;
+        }
+    }
+
+    .main-home-grid {
+        #home {
+            .container-home-text {
+                width: 75%;
+                margin-left: 20px;
+                margin-top: 300px;
+            }
+        }
+    }
+
+    .personal-select {
+        width: 320px;
+        height: 150px;
+        margin: 10px;
+    }
+
+    .basic-section-shop {
+        .basic-section {
+            width: 320px;
+        }
+    }
+
+    .silver-section-shop {
+        .silver-section {
+            width: 320px;
+        }
+    }
+
+    .gold-section-shop {
+        .gold-section {
+            width: 320px;
+        }
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .container-home-grid {
+        display: grid;
+
+        width: 100vw;
+        grid-template-areas:
+            "header header header header"
+            "main main main main"
+            "footer footer footer footer"
+        ;
+    }
+
+
+    .home-text {
+        width: 50%;
+        width: 300px;
+    }
+
+    .basic-section,
+    .silver-section,
+    .gold-section {
+        width: 300px;
+    }
+
+    .coder-house {
+        height: 1000px;
+
+        .coder-house-text {
+            width: 250px;
+            height: 700px;
+        }
+    }
+
+    .pilas-baby {
+
+        .pilas-baby-text {
+            width: 280px;
+            padding-right: 0px;
+        }
+
+        .pilas-baby-img {
+            width: 280px;
+            height: 280px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .personal-select {
+        width: 295px;
+        height: 140px;
+        margin: 10px;
+
+    }
+
+    .personal-physical {
+        display: flex;
+        align-items: flex-start;
+
+        .personal-physical-text {
+            width: 300px;
+            padding-left: 0;
+            padding-top: 150px;
+        }
+    }
+
+    .personal-mental-img {
+        width: 300px;
+        height: 300px;
+        margin-top: 200px;
+    }
+
+    .personal-mental {
+        flex-direction: column;
+        height: 1300px;
+        justify-content: flex-start;
+
+        .personal-mental-text {
+            width: 300px;
+            height: 300px;
+            padding-top: 20px;
+            text-align: center;
+            padding-right: 0;
+        }
+    }
+
+    .personal-expressive {
+        height: 1000px;
+        align-items: flex-start;
+
+        .personal-expressive-text {
+            padding-left: 30px;
+            padding-top: 150px;
+        }
+    }
+
+    .personal-occupational {
+        justify-content: flex-start;
+        height: 900px;
+
+        .personal-occupational-text {
+            padding-right: 0;
+            padding-top: 150px;
+            width: 300px;
+            height: 300px;
+        }
+    }
+
+    .images-occupational {
+
+        .occupational-img-two {
+            width: 0;
+            height: 0;
+        }
+
+        .occupational-img-one {
+            width: 0
+        }
+    }
+
+    .contact-container {
+        width: 90% !important;
+    }
+}

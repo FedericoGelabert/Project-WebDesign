@@ -1,0 +1,291 @@
+// Shop
+
+.container-shop-grid {
+    display: grid;
+
+    grid-template-areas:
+        "header header header"
+        "main main main"
+        "sec-header sec-header sec-header"
+        "section-one section-two section-three"
+        "footer footer footer";
+    height: 100vh;
+}
+
+.header-shop-grid {
+    grid-area: header;
+}
+
+.main-shop-grid {
+    grid-area: main;
+    display: flex;
+    height: 700px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(https://res.cloudinary.com/federicog/image/upload/v1660351309/my-proyect-css/welcome-background.jpg);
+    background-blend-mode: soft-light;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+
+    .main-shop-text {
+        font-size: 7em !important;
+    }
+
+    .go-to-buy {
+        font-weight: bold;
+        width: 100px;
+        height: 32px;
+        border-radius: 10px;
+        cursor: pointer;
+        color: black;
+        transition: .5s;
+
+        &:hover {
+            background-color: rgb(0, 0, 0);
+            color: white;
+        }
+    }
+}
+
+.second-header-shop-grid {
+    grid-area: sec-header;
+    background-color: darkblue;
+}
+
+.shop-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: black;
+    color: white;
+    font-size: 1em;
+
+    .shop-nav {
+        display: flex;
+
+        ul {
+            list-style: none;
+            display: flex;
+        }
+        li {
+            padding: 10px;
+        }
+        a {
+            text-decoration: none;
+            color: white;  
+        }
+    }
+}
+
+.basic-section-shop {
+    grid-area: section-one;
+    background-color: white;
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .basic-section {
+        border: 3px solid black;
+        width: 380px;
+        position: absolute;
+        box-shadow: 4px 4px 8px black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 20px;
+
+        li {
+            list-style-type: none;
+        }
+
+        h2 {
+            text-shadow: 1px 1px 1px black;
+        }
+
+        .basic {
+            .basic-h2 {
+                padding-bottom: 180px;
+                text-align: center;
+                margin-top: 10px;
+            }
+
+            .basic-ul {
+                padding-bottom: 100px;
+                bottom: 140px;
+                position: relative;
+                font-size: 1.25em;
+            }
+
+            .basic-buy {
+                flex-direction: column;
+                display: flex;
+                justify-content: space-between;
+                text-align: center;
+                font-size: 1.2em;
+
+                p {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.silver-section-shop {
+    grid-area: section-two;
+    background-color: rgb(238, 237, 237);
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .silver-section {
+        border: 3px solid black;
+        width: 380px;
+        position: absolute;
+        box-shadow: 4px 4px 8px black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px 20px;
+
+        h2 {
+            text-shadow: 1px 1px 1px black;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        .silver {
+            .silver-h2 {
+                padding-bottom: 180px;
+                text-align: center;
+                margin-top: 10px;
+
+                .silver-color {
+                    color: rgb(122, 121, 121);
+                }
+            }
+
+            .silver-ul {
+                padding-bottom: 100px;
+                bottom: 140px;
+                position: relative;
+                font-size: 1.25em;
+            }
+
+            .silver-buy {
+                flex-direction: column;
+                display: flex;
+                justify-content: space-between;
+                text-align: center;
+                font-size: 1.2em;
+
+                p {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.gold-section-shop {
+    grid-area: section-three;
+    background-color: white;
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .gold-section {
+        border: 3px solid black;
+        position: absolute;
+        box-shadow: 4px 4px 8px black;
+        width: 380px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 0px 20px;
+
+        h2 {
+            text-shadow: 1px 1px 1px black;
+        }
+
+        li {
+            list-style-type: none;
+        }
+
+        .gold {
+            .gold-h2 {
+                padding-bottom: 180px;
+                text-align: center;
+                margin-top: 10px;
+
+                .gold-color {
+                    color: #fff714;
+                    font-weight: bold;
+                }
+            }
+
+            .gold-ul {
+                padding-bottom: 100px;
+                bottom: 140px;
+                position: relative;
+                font-size: 1.25em;
+            }
+
+            .gold-buy {
+                flex-direction: column;
+                display: flex;
+                justify-content: space-between;
+                text-align: center;
+                font-size: 1.2em;
+
+                p {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
+.footer-shop-grid {
+    grid-area: footer;
+}
+
+
+.check-green {
+    color: green;
+}
+
+.check-red {
+    color: red;
+}
+
+.shop-price {
+    color: red;
+    font-weight: bold;
+}
+
+.button-shop {
+    padding: 4px;
+    margin: 5px;
+    border-radius: 15px;
+    background-color: rgb(162, 239, 47);
+    font-weight: bold;
+    box-shadow: 1px 1px 1px black;
+    width: 120px;
+    cursor: pointer;
+    transition: 1s;
+    margin-bottom: 10px;
+
+    &:hover {
+        transform: scale(1.05, 1.05);
+    }
+}

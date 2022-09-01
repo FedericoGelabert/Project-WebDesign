@@ -1,0 +1,185 @@
+// Personal
+
+
+.personal-container {
+    background-color: $personal-black;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    padding-top: 20px;
+
+    a {
+        text-decoration: none;
+    }
+
+    .personal-select {
+        width: 325px;
+        height: 270px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        color: white;
+        border: white solid 2px;
+        border-radius: 8px;
+        margin: 1px;
+
+        h3 {
+            font-size: 25px;
+            text-shadow: 2px black;
+            margin-bottom: 6px;
+            text-shadow: black 2px 2px;
+        }
+    }
+
+    .physical {
+        background-image: url(https://res.cloudinary.com/federicog/image/upload/v1660351309/my-proyect-css/about-img.jpg);
+        background-color: rgba(0, 0, 0, .42);
+        background-blend-mode: soft-light;
+    }
+
+    .mental {
+        background-image: url(https://res.cloudinary.com/federicog/image/upload/v1660351317/my-proyect-css/mental.jpg);
+        background-color: rgba(0, 0, 0, .42);
+        background-size: cover;
+        background-blend-mode: soft-light;
+    }
+
+    .expressive {
+        background-image: url(https://res.cloudinary.com/federicog/image/upload/v1660351309/my-proyect-css/courses-coderhouse.jpg);
+        background-color: rgba(0, 0, 0, .42);
+        background-size: cover;
+        background-blend-mode: soft-light;
+    }
+
+    .occupational {
+        background-image: url(https://res.cloudinary.com/federicog/image/upload/v1660351309/my-proyect-css/occupational.jpg);
+        background-color: rgba(0, 0, 0, .42);
+        background-size: cover;
+        background-blend-mode: soft-light;
+    }
+}
+
+// PERSONAL-PHYSICAL
+
+.personal-physical {
+    width: 100%;
+    height: 900px;
+    background-color: $personal-black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .personal-physical-text {
+        width: 400px;
+        height: 400px;
+        padding-left: 30px;
+    }
+}
+
+.personal-physical-img {
+    width: 500px;
+    height: 400px;
+    background-image: url(https://res.cloudinary.com/federicog/image/upload/v1660351309/my-proyect-css/about-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    margin-top: 50px;
+}
+
+// PERSONAL-MENTAL
+
+.personal-mental {
+    width: 100%;
+    height: 900px;
+    background-color: #f4f4f4;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+
+    .personal-mental-text {
+        width: 400px;
+        height: 400px;
+        padding-right: 30px;
+        color: black;
+    }
+}
+
+.personal-mental-img {
+    width: 500px;
+    height: 400px;
+    background-image: url(https://res.cloudinary.com/federicog/image/upload/v1660351317/my-proyect-css/mental.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    margin-top: 50px;
+}
+
+
+// PERSONAL-EXPRESSIVE
+
+.personal-expressive {
+    width: 100%;
+    height: 1000px;
+    background-color: $personal-black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+
+    .personal-expressive-text,
+    .personal-expressive-text-two {
+        width: 450px;
+        height: 450px;
+        padding-right: 30px;
+        color: white;
+        flex-direction: row;
+        font-size: 18px;
+        padding-top: 180px;
+    }
+}
+
+
+// PERSONAL-OCCUPATIONAL
+
+.personal-occupational {
+    width: 100%;
+    height: 800px;
+    background-color: $personal-black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(124, 23, 23);
+    flex-direction: column;
+
+    .personal-occupational-text {
+        width: 900px;
+        height: 170px;
+        padding-right: 30px;
+        color: white;
+        font-size: 18px;
+        text-align: center;
+    }
+}
+
+
+.images-occupational {
+
+    .occupational-img-one {
+        width: 380px;
+        height: 280px;
+        border-radius: 20px;
+        margin-right: 15px;
+        margin-top: 25px;
+    }
+
+    .occupational-img-two {
+        width: 380px;
+        height: 280px;
+        border-radius: 20px;
+        margin-top: 25px;
+    }
+}
