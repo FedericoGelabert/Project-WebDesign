@@ -1,6 +1,23 @@
 // Personal
 
 
+// Mixins & Extends 
+
+@mixin occupational-images {
+    width: 380px;
+    height: 280px;
+    border-radius: 20px;
+    margin-top: 25px;
+}
+
+%pmeo {
+    background-color: rgba(0, 0, 0, .42);
+    background-blend-mode: soft-light;
+}
+
+
+
+
 .personal-container {
     background-color: $personal-black;
     display: flex;
@@ -33,29 +50,25 @@
 
     .physical {
         background-image: url(https://res.cloudinary.com/federicog/image/upload/v1660351309/my-proyect-css/about-img.jpg);
-        background-color: rgba(0, 0, 0, .42);
-        background-blend-mode: soft-light;
+        @extend %pmeo;
     }
 
     .mental {
         background-image: url(https://res.cloudinary.com/federicog/image/upload/v1660351317/my-proyect-css/mental.jpg);
-        background-color: rgba(0, 0, 0, .42);
         background-size: cover;
-        background-blend-mode: soft-light;
+        @extend %pmeo;
     }
 
     .expressive {
         background-image: url(https://res.cloudinary.com/federicog/image/upload/v1660351309/my-proyect-css/courses-coderhouse.jpg);
-        background-color: rgba(0, 0, 0, .42);
         background-size: cover;
-        background-blend-mode: soft-light;
+        @extend %pmeo;
     }
 
     .occupational {
         background-image: url(https://res.cloudinary.com/federicog/image/upload/v1660351309/my-proyect-css/occupational.jpg);
-        background-color: rgba(0, 0, 0, .42);
         background-size: cover;
-        background-blend-mode: soft-light;
+        @extend %pmeo;
     }
 }
 
@@ -169,17 +182,11 @@
 .images-occupational {
 
     .occupational-img-one {
-        width: 380px;
-        height: 280px;
-        border-radius: 20px;
+        @include occupational-images;
         margin-right: 15px;
-        margin-top: 25px;
     }
 
     .occupational-img-two {
-        width: 380px;
-        height: 280px;
-        border-radius: 20px;
-        margin-top: 25px;
+        @include occupational-images;
     }
 }

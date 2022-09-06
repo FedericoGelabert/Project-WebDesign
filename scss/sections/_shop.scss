@@ -1,5 +1,45 @@
 // Shop
 
+
+// Mixins & Extends
+
+@mixin bsg-buy {
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    font-size: 1.2em;
+}             
+
+%bsg-section {
+    border: 3px solid black;
+    width: 380px;
+    position: absolute;
+    box-shadow: 4px 4px 8px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 20px;
+}
+
+%bsg-h2 {
+    padding-bottom: 180px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+%bsg-ul {
+    padding-bottom: 100px;
+    bottom: 140px;
+    position: relative;
+    font-size: 1.25em;
+}
+
+
+
+
+
+
 .container-shop-grid {
     display: grid;
 
@@ -36,8 +76,8 @@
 
     .go-to-buy {
         font-weight: bold;
-        width: 100px;
-        height: 32px;
+        width: 110px;
+        height: 35px;
         border-radius: 10px;
         cursor: pointer;
         color: black;
@@ -89,14 +129,7 @@
     align-items: center;
 
     .basic-section {
-        border: 3px solid black;
-        width: 380px;
-        position: absolute;
-        box-shadow: 4px 4px 8px black;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0px 20px;
+        @extend %bsg-section;
 
         li {
             list-style-type: none;
@@ -108,24 +141,15 @@
 
         .basic {
             .basic-h2 {
-                padding-bottom: 180px;
-                text-align: center;
-                margin-top: 10px;
+                @extend %bsg-h2;
             }
 
             .basic-ul {
-                padding-bottom: 100px;
-                bottom: 140px;
-                position: relative;
-                font-size: 1.25em;
+                @extend %bsg-ul;
             }
 
             .basic-buy {
-                flex-direction: column;
-                display: flex;
-                justify-content: space-between;
-                text-align: center;
-                font-size: 1.2em;
+                @include bsg-buy;
 
                 p {
                     margin-bottom: 0;
@@ -144,14 +168,7 @@
     align-items: center;
 
     .silver-section {
-        border: 3px solid black;
-        width: 380px;
-        position: absolute;
-        box-shadow: 4px 4px 8px black;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 0px 20px;
+        @extend %bsg-section;
 
         h2 {
             text-shadow: 1px 1px 1px black;
@@ -163,9 +180,7 @@
 
         .silver {
             .silver-h2 {
-                padding-bottom: 180px;
-                text-align: center;
-                margin-top: 10px;
+                @extend %bsg-h2;
 
                 .silver-color {
                     color: rgb(122, 121, 121);
@@ -173,18 +188,11 @@
             }
 
             .silver-ul {
-                padding-bottom: 100px;
-                bottom: 140px;
-                position: relative;
-                font-size: 1.25em;
+                @extend %bsg-ul;
             }
 
             .silver-buy {
-                flex-direction: column;
-                display: flex;
-                justify-content: space-between;
-                text-align: center;
-                font-size: 1.2em;
+                @include bsg-buy;
 
                 p {
                     margin-bottom: 0;
@@ -203,15 +211,8 @@
     align-items: center;
 
     .gold-section {
-        border: 3px solid black;
-        position: absolute;
-        box-shadow: 4px 4px 8px black;
-        width: 380px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @extend %bsg-section;
         flex-direction: column;
-        padding: 0px 20px;
 
         h2 {
             text-shadow: 1px 1px 1px black;
@@ -223,9 +224,7 @@
 
         .gold {
             .gold-h2 {
-                padding-bottom: 180px;
-                text-align: center;
-                margin-top: 10px;
+                @extend %bsg-h2;
 
                 .gold-color {
                     color: #fff714;
@@ -234,18 +233,11 @@
             }
 
             .gold-ul {
-                padding-bottom: 100px;
-                bottom: 140px;
-                position: relative;
-                font-size: 1.25em;
+                @extend %bsg-ul;
             }
 
             .gold-buy {
-                flex-direction: column;
-                display: flex;
-                justify-content: space-between;
-                text-align: center;
-                font-size: 1.2em;
+                @include bsg-buy;
 
                 p {
                     margin-bottom: 0;
