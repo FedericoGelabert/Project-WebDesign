@@ -4,48 +4,51 @@
     display: grid;
 
     grid-template-areas:
-        "header header header header"
-        "main main main main"
-        "footer footer footer footer"
+        "header header header"
+        "main main main"
+        "main-content main-content main-content"
+        "footer footer footer"
     ;
     height: 100vh;
     width: 100vw;
 }
 
-.header-home-grid {
+.header {
     grid-area: header;
-    background-color: rgb(28, 28, 28);
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
+}
+
+.main-content {
+    grid-area: main-content;
+
+    .main-content-container-text {
+        font-family: 'Roboto Mono', monospace;
+        font-weight: bold;
+        color: white;
+        width: 500px;
+        margin-left: 100px;
+        margin-top: 180px;
+        animation-name: main-text;
+        animation-iteration-count: 1;
+        animation-timing-function: ease-in;
+        animation-duration: 1.2s;
+        animation-delay: .3s;
+        opacity: 0;
+        animation-fill-mode: forwards;
+
+        h1 {
+            font-size: 4em;
+        }
+    }
 }
 
 .main-home-grid {
     grid-area: main;
-    height: 95vh;
-    background-image: url(https://res.cloudinary.com/federicog/image/upload/v1660351317/my-proyect-css/main-background_qymp6v.jpg);
-    background-color: rgba(0, 0, 0, .4);
+    height: 900px;
+    background-image: url(https://res.cloudinary.com/federicog/image/upload/v1663027220/my-proyect-css/index-background.jpg);
+    background-color: rgba(0, 0, 0, .5);
     background-blend-mode: soft-light;
-    display: flex;
-    #home {
-    .container-home-text {
-        font-family: 'Roboto Mono', monospace;
-        font-weight: bold;
-        color: white;
-        width: 400px;
-        margin-left: 100px;
-        margin-top: 300px;
-        .home-text {
-            animation-name: main-text;
-            animation-iteration-count: 1;
-            animation-timing-function: ease-in;
-            animation-duration: 1.2s;
-            animation-delay: .3s;
-            opacity: 0;
-            animation-fill-mode: forwards;
-            }
-        }
-    }
+    background-size: cover;
+    background-position-y: -150px;
 }
 
 .footer-home-grid {

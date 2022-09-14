@@ -9,7 +9,8 @@
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
     <meta name="keywords" content="flab, portfolio, web design, federico gelabert, web developer">
-    <meta name="description" content="Flab is a portfolio proyect created to complete the Front End Career in CoderHouse.">
+    <meta name="description"
+        content="Flab is a portfolio proyect created to complete the Front End Career in CoderHouse.">
     <title>Flab - Home</title>
     <link rel="icon" href="./img/icon.ico">
 
@@ -17,7 +18,7 @@
 </head>
 
 <body>
-
+    <div class="main-home-grid">
         <header class="header">
             <nav class="navbar navbar-expand-lg bg-light">
                 <div class="container-fluid">
@@ -30,49 +31,54 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
                         <ul class="navbar-nav">
-                            <li class="nav-item">
+                            <li class="nav-item nav-item-active">
                                 <a class="nav-link" href="index.html">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./pages/shop.html">Shop</a>
+                                <a class="nav-link" href="./pages/about.html">About</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="./pages/courses.html">Courses</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="./pages/personal.html">Personal</a>
+                                <a class="nav-link" href="./pages/shop.html">Shop</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="./pages/contact.html">Contact</a>
                             </li>
                         </ul>
+                        <div class="socialmedia-header">
+                            <a href="#" name="instagram" class="socialmedia"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#" name="facebook" class="socialmedia"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#" name="youtube" class="socialmedia"><i class="fa-brands fa-youtube"></i></a>
+                        </div>
                     </div>
                 </div>
             </nav>
         </header>
-
-        <main class="main-home-grid">
-            <section id="home">
-                <div class="container-home-text">
-                    <h2 class="home-text">”Life could be a dream if you take care of you.”</h2>
-                </div>
-                <div class="container-home-img">
-                </div>
-            </section>
-        </main>
-        <footer class="footer-home-grid footer">
-            <div class="footer-social-media"></div>
-            <a href="#" name="instagram" class="socialmedia"><i class="fa-brands fa-instagram"></i></a>
-            <a href="#" name="facebook" class="socialmedia"><i class="fa-brands fa-facebook"></i></a>
-            <a href="#" name="youtube" class="socialmedia"><i class="fa-brands fa-youtube"></i></a>
-            <div class="moreinfo">
-                <a href="">Privacy</a>
-                <a href="">Terms of Service</a>
-            </div> <br>
-            <div class="footer-copyright">
-                <p>Copyrights © 2022 Federico G.</p>
+        <section class="main-content">
+            <div class="main-content-container-text">
+                <h1>I'm Federico Gelabert...</h1>
+                <p>This is my official portfolio, here you'll <br>
+                    find my experience as Web Developer.</p>
             </div>
-        </footer>
+            <div class="main-content-container-img">
+            </div>
+        </section>
+    </div>
+    <footer class="footer-home-grid footer">
+        <div class="footer-social-media"></div>
+        <a href="#" name="instagram" class="socialmedia"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" name="facebook" class="socialmedia"><i class="fa-brands fa-facebook"></i></a>
+        <a href="#" name="youtube" class="socialmedia"><i class="fa-brands fa-youtube"></i></a>
+        <div class="moreinfo">
+            <a href="">Privacy</a>
+            <a href="">Terms of Service</a>
+        </div> <br>
+        <div class="footer-copyright">
+            <p>Copyrights © 2022 Federico G.</p>
+        </div>
+    </footer>
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"

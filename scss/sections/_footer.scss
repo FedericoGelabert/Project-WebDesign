@@ -2,11 +2,10 @@
 
 
 $main-black: rgb(28, 28, 28);
-$personal-black: #111111;
 $top-red: rgb(237, 120, 120);
 
 .footer {
-    background-color: $main-black;
+    background-color: rgb(4, 4, 4);
     color: white;
     text-align: center;
     padding-top: 28px;
@@ -35,6 +34,7 @@ $top-red: rgb(237, 120, 120);
         }
 
     }
+
     .footer-copyright {
         display: flex;
         justify-content: center;

@@ -1,0 +1,160 @@
+// Personal
+
+
+// Mixins & Extends 
+
+@mixin proyects {
+    width: 85%;
+    background-color: transparent;
+    margin: 22px;
+    border-radius: 10px;
+}
+
+.about-main-container {
+    height: 850px;
+    background-image: url(https://res.cloudinary.com/federicog/image/upload/v1663027220/my-proyect-css/index-background.jpg);
+    background-color: rgba(0, 0, 0, .5);
+    background-blend-mode: soft-light;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-y: -150px;
+
+    .about-text-container {
+        color: white;
+        text-align: center;
+        margin-top: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        animation-name: aparition-box;
+        animation-iteration-count: 1;
+        animation-duration: 1.8s;
+        animation-fill-mode: forwards;
+
+        h1 {
+            font-size: 6em;
+        }
+
+        .btn-aboutme,
+        .btn-proyects {
+            font-weight: bold;
+            width: 105px;
+            height: 35px;
+            border-radius: 10px;
+            cursor: pointer;
+            color: rgb(255, 255, 255);
+            transition: .5s;
+            background: transparent;
+            border: solid rgb(255, 255, 255) 2px;
+            margin: 3px;
+
+            &:hover {
+                background-color: rgb(255, 255, 255);
+                color: rgb(0, 0, 0);
+            }
+        }
+    }
+}
+
+
+
+// ABOUT-PROFILE
+
+.about-profile {
+    width: 100%;
+    height: 900px;
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .about-profile-text {
+        width: 400px;
+        height: 400px;
+        padding-left: 30px;
+    }
+}
+
+.about-profile-img {
+    width: 500px;
+    height: 400px;
+    background-image: url(https://res.cloudinary.com/federicog/image/upload/v1660351309/my-proyect-css/about-img.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    margin-top: 50px;
+}
+
+// ABOUT-PROYECTS
+
+.about-proyects {
+    width: 100%;
+    height: 800px;
+    opacity: .92;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    .proyects-text h2 {
+        font-size: 3em;
+    }
+    .container-proyect-hydro {
+        display: flex;
+        justify-content: center;
+        flex-direction: row-reverse;
+        align-items: center;
+    
+        .hydro-img {
+            width: 450px;
+            height: 450px;
+            border-radius: 10px;
+            background-image: url(https://res.cloudinary.com/federicog/image/upload/v1661450930/hydro-bootstrap/galery-img7.jpg);
+            background-size: cover;
+        }
+    
+        .hydro-general-content {
+            display: flex;
+            flex-direction: column;
+            width: 480px;
+        }
+    
+        .hydro-project-one {
+            @include proyects;
+            display: flex;
+            align-items: center;
+    
+            .hydro-content {
+                color: black;
+                margin: 30px;
+                width: 400px;
+    
+                a {
+                    text-decoration: none;
+                    color: red;
+                    font-weight: bold;
+                }
+            }
+        }
+    
+        .hydro-project-two {
+            @include proyects;
+            display: flex;
+            align-items: center;
+    
+            .hydro-content {
+                color: black;
+                margin: 30px;
+                width: 400px;
+    
+                a {
+                    text-decoration: none;
+                    color: red;
+                    font-weight: bold;
+                }
+            }
+        }
+    }
+}

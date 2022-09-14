@@ -3,15 +3,6 @@
 
 // Mixins & Extends
 
-@mixin nth-child-style {
-    background-color: #3b5999;
-    border: double white 2px;
-    border-radius: 18px;
-    background-repeat: no-repeat;
-    background-color: rgba(0, 0, 0, 0.6);
-    background-blend-mode: soft-light;
-    background-size: cover;
-}
 
 %text-coderhouse-pilasbaby {
     width: 360px;
@@ -34,79 +25,52 @@
 }
 
 
-
-
-#courses {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    height: 600px;
-    text-shadow: 1px;
-    background-image: url(https://res.cloudinary.com/federicog/image/upload/v1660351311/my-proyect-css/courses-background.jpg);
-    background-color: rgba(0, 0, 0, 0.8);
+.courses-main-container {
+    background-image: url(https://res.cloudinary.com/federicog/image/upload/v1663027220/my-proyect-css/index-background.jpg);
+    background-color: rgba(0, 0, 0, 0.5);
     background-blend-mode: soft-light;
     background-repeat: no-repeat;
     background-size: cover;
+    height: 800px;
+    background-position-y: -150px;
 
-    h1 {
-        text-align: center;
-        margin-bottom: 25px;
-        color: white;
-    }
+    .courses-main {
+        display: flex;
+        flex-direction: column;
+        text-shadow: 1px;
+        margin-top: 200px;
+        justify-content: center;
+        align-items: center;
+        animation-name: aparition-box;
+        animation-iteration-count: 1;
+        animation-duration: 1.8s;
+        animation-fill-mode: forwards;
 
-    h3 {
-        font-size: 21px;
-        color: white;
-    }
+        h1 {
+            font-size: 6em !important;
+            margin-bottom: 5px;
+        }
 
-    p {
-        color: rgb(239, 93, 93);
-    }
-
-    .container-h1-cards {
-        padding-top: 40px;
-        padding-bottom: 30px;
-
-        .container-cards {
+        p {
+            color: rgb(239, 93, 93);
             text-align: center;
+        }
 
-            .card {
-                padding: 30px 0px;
-                margin: 15px;
+        .btn-courses {
+            font-weight: bold;
+            width: 125px;
+            height: 38px;
+            border-radius: 10px;
+            cursor: pointer;
+            color: white;
+            transition: .5s;
+            background: transparent;
+            border: solid rgb(255, 255, 255) 2px;
+            margin: 3px;
 
-                &:nth-child(1) {
-                    @include nth-child-style;
-                    background-image: url(https://res.cloudinary.com/federicog/image/upload/v1660351309/my-proyect-css/ch-courses.jpg);
-                    background-position: 70%;
-                }
-
-                &:nth-child(2) {
-                    @include nth-child-style;
-                    background-image: url(https://res.cloudinary.com/federicog/image/upload/v1660351309/my-proyect-css/am-courses.png);
-                    background-position: 50%;
-                }
-
-                .card-button {
-                    margin-top: 10px;
-                    width: 60px;
-                    height: 35px;
-                    border-radius: 8px;
-                    font-weight: bold;
-                    cursor: pointer;
-                    cursor: hand;
-
-                    &:hover {
-                        background-color: rgb(0, 0, 0);
-                        transition: .5s;
-                        color: white;
-                    }
-
-                    a {
-                        text-decoration: none;
-                        font-weight: bold;
-                        color: black;
-                    }
-                }
+            &:hover {
+                background-color: rgb(255, 255, 255);
+                color: rgb(0, 0, 0);
             }
         }
     }

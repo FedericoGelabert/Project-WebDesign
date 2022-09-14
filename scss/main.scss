@@ -15,14 +15,13 @@
 @import "./sections/home";
 @import "./sections/shop";
 @import "./sections/courses";
-@import "./sections/personal";
+@import "./sections/about";
 @import "./sections/contact";
 
 
 // Variables
 
 $main-black: rgb(28, 28, 28);
-$personal-black: #111111;
 $top-red: rgb(237, 120, 120);
 
 body {
@@ -41,7 +40,7 @@ button {
 // Key-frames
 
 
-@keyframes main-text {
+@keyframes aparition-box {
     0% {
         opacity: 0;
 
@@ -54,13 +53,23 @@ button {
     }
 }
 
+@keyframes navbar-absolute {
+    from {
+        transform: translate(250px, 0px);
+    }
+
+    to {
+        transform: translate(35px, 0px);
+    }
+}
+
 
 
 // Media Querys
 
 
 @media (max-width: 1500px) {
-    .personal-select {
+    .about-select {
         width: 320px;
         height: 250px;
         display: flex;
@@ -72,7 +81,16 @@ button {
         border-radius: 8px;
         margin: 1px;
     }
+
+    .main-home-grid,
+    .main-shop-grid,
+    .courses-main-container,
+    .about-main-container,
+    .contact-main-container {
+        background-position-y: 0;
+    }
 }
+
 
 @media (max-width: 1333px) {
     .container-shop-grid {
@@ -100,396 +118,493 @@ button {
         background-color: white;
     }
 
-    .personal-container {
-        flex-wrap: wrap;
-
-        .personal-select {
-            width: 320px;
-            height: 250px;
-            margin: 10px;
+    .contact-textarea {
+        .contact-message {
+            margin-left: 11%;
+            margin-right: 11%;
         }
     }
 
-    .personal-occupational {
-
-        .personal-occupational-text {
-            width: 600px;
+    .background-image {
+        .contact-container {
+            width: 55vw;
         }
     }
 
-    .occupational-img-one,
-    .occupational-img-two {
-        position: relative;
-        top: 90px;
-    }
-}
+    .contact-form {
+        .container-contact-base {
+            .contact-base-two {
+                margin-left: 11%;
+            }
 
-@media (max-width: 950px) {
-
-    .main-shop-grid {
-        .main-shop-text {
-            font-size: 4em !important;
-        }
-    }
-
-    .personal-physical-img {
-        width: 0;
-    }
-
-    .personal-mental-img {
-        width: 320px;
-        height: 320px;
-    }
-
-    .personal-expressive {
-
-        .personal-expressive-text {
-            width: 400px;
-        }
-
-        .personal-expressive-text-two {
-            font-size: 0;
-            width: 0;
-            height: 0;
-        }
-    }
-
-    .personal-occupational {
-        height: 900px;
-        justify-content: flex-start;
-
-        .personal-occupational-text {
-            width: 370px;
-            padding-top: 200px;
-        }
-    }
-
-    .occupational-img-two,
-    .occupational-img-one {
-        width: 0px !important;
-        height: 0px !important;
-    }
-
-
-}
-
-
-@media (max-width: 768px) {
-
-    .header-home-grid,
-    .header-shop-grid,
-    .header {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .logo {
-        margin-top: 5px;
-    }
-
-    .main-home-grid {
-        #home {
-            .container-home-text {
-                width: 400px;
-                margin-left: 60px;
-                margin-top: 300px;
+            .contact-base {
+                width: 33%;
+                margin-left: 11%;
             }
         }
     }
 
-    .main-shop-grid {
-        height: 600px;
+    .contact-general-info {
+        width: 28vw !important;
     }
 
-    .container-shop-grid {
-        grid-template-areas:
-            "header header header"
-            "main main main"
-            "sec-header sec-header sec-header"
-            "section-one section-one section-one"
-            "section-two section-two section-two"
-            "section-three section-three section-three"
-            "footer footer footer";
-        width: 100vw;
+}
+
+@media (max-width: 1210px) {
+    .contact-form {
+        .contact-textarea {
+            .contact-message {
+                width: 80%;
+                margin-left: 10%;
+                margin-right: 10%;
+            }
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .socialmedia-header {
+        .socialmedia {
+            display: none;
+        }
     }
 
-    .basic-section-shop {
-        background-color: rgb(175, 168, 168);
+    .nav-link {
+        justify-content: center;
+        display: flex;
+        padding: 5px 0px;
     }
 
-    .coder-house-img {
-        width: 0px !important;
-        height: 0px !important;
+    .navbar-collapse {
+        position: absolute;
+        width: 170px;
+        top: 75px;
+        right: -45px;
+        background-color: rgba(0, 0, 0, 0.8);
+        border: 1px solid white;
+        transition: .2s;
+        z-index: 100;
+        border-radius: 15px;
+        animation-name: aparition-box;
+        animation-iteration-count: 1;
+        animation-duration: 1.8s;
+        animation-fill-mode: forwards;
     }
 
-    .pilas-baby {
-        height: 1000px;
+    .container-proyect-hydro {
+        .hydro-img {
+            width: 0px;
+            height: 0px;
+            display: none;
+        }
+    }
 
-        .pilas-baby-img-text {
+    @media (max-width: 950px) {
+
+        .main-shop-grid {
+            .main-shop-text {
+                font-size: 4em !important;
+            }
+        }
+
+        .about-profile-img {
+            width: 0;
+        }
+
+        .contact-form {
+            .container-contact-base {
+                .contact-base {
+                    width: 33%;
+                    margin-left: 11%;
+                }
+
+                .contact-base-two {
+                    width: 33%;
+                    margin-left: 11%;
+                }
+
+            }
+        }
+
+        .contact-container {
+            margin-left: 10vw;
+        }
+
+        .contact-main-container {
+            height: 1400px;
+        }
+
+        .background-image {
+            flex-direction: column;
+            height: 600px;
+
+            .contact-container {
+                width: 78%;
+            }
+
+            .contact-general-info {
+                height: 210px;
+                width: 78% !important;
+                margin-left: 10%;
+
+                .general-info {
+                    display: flex;
+                    flex-direction: row;
+                }
+
+                .general-info-gmail,
+                .general-info-phone,
+                .general-info-location {
+                    flex-direction: column;
+                    margin: 0px 30px;
+                }
+            }
+        }
+
+
+    }
+
+
+    @media (max-width: 768px) {
+
+        .header-home-grid,
+        .header-shop-grid,
+        .header {
             flex-direction: column;
             align-items: center;
-            padding-top: 50px;
         }
 
-        .pilas-baby-text {
-            width: 400px;
-            padding-right: 0px;
+        .logo {
+            margin-top: 5px;
         }
 
-        .pilas-baby-img {
-            width: 370px;
-            height: 350px;
-        }
-    }
+        .main-home-grid {
+            .main-content {
+                .main-content-container-text {
+                    width: 75%;
+                    margin-left: 60px;
+                    margin-top: 200px;
+                }
 
-    .personal-select {
-        width: 500px;
-        height: 150px;
-        margin: 10px;
-    }
+                h1 {
+                    font-size: 2.6em;
+                }
 
-    .personal-physical {
-        height: 900px;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .personal-physical-img {
-        width: 0;
-    }
-
-    .personal-mental {
-        height: 1200px;
-        flex-direction: column;
-
-        .personal-mental-text {
-            width: 400px;
-            height: 400px;
-            padding-top: 20px;
-            text-align: center;
-            padding-right: 0px;
-        }
-    }
-
-    .personal-mental-img {
-        width: 400px;
-        height: 400px;
-    }
-
-    .personal-expressive {
-        height: 800px;
-        align-items: flex-start;
-
-        .personal-expressive-text {
-            width: 450px;
-            height: 450px;
-            padding-right: 0px;
-            color: white;
-            flex-direction: row;
-            font-size: 16px;
-            text-align: center;
-            padding-left: 15px;
-        }
-
-        .personal-expressive-text-two {
-            font-size: 0;
-            width: 0;
-            height: 0;
-        }
-    }
-
-    .personal-occupational {
-        height: 850px;
-        justify-content: flex-start;
-
-        .personal-occupational-text {
-            padding-right: 0;
-            width: 370px;
-            padding-top: 200px;
-        }
-    }
-
-    .images-occupational {
-        .occupational-img-one {
-            top: 440px;
-            position: relative;
-            margin-right: 0;
-        }
-
-        .occupational-img-two {
-            width: 0;
-            height: 0;
-        }
-    }
-
-}
-
-@media (max-width: 550px) {
-
-    .main-shop-grid {
-        .main-shop-text {
-            font-size: 2.6em !important;
-        }
-    }
-
-    .main-home-grid {
-        #home {
-            .container-home-text {
-                width: 75%;
-                margin-left: 20px;
-                margin-top: 300px;
+                p {
+                    font-size: 0.8em;
+                }
             }
         }
-    }
 
-    .personal-select {
-        width: 320px;
-        height: 150px;
-        margin: 10px;
-    }
-
-    .basic-section-shop {
-        .basic-section {
-            width: 320px;
-        }
-    }
-
-    .silver-section-shop {
-        .silver-section {
-            width: 320px;
-        }
-    }
-
-    .gold-section-shop {
-        .gold-section {
-            width: 320px;
-        }
-    }
-
-}
-
-
-@media (max-width: 450px) {
-
-    .container-home-grid {
-        display: grid;
-
-        width: 100vw;
-        grid-template-areas:
-            "header header header header"
-            "main main main main"
-            "footer footer footer footer"
-        ;
-    }
-
-
-    .home-text {
-        width: 50%;
-        width: 300px;
-    }
-
-    .basic-section,
-    .silver-section,
-    .gold-section {
-        width: 300px;
-    }
-
-    .coder-house {
-        height: 1000px;
-
-        .coder-house-text {
-            width: 250px;
+        .main-shop-grid {
             height: 700px;
         }
-    }
 
-    .pilas-baby {
-
-        .pilas-baby-text {
-            width: 280px;
-            padding-right: 0px;
+        .container-shop-grid {
+            grid-template-areas:
+                "header header header"
+                "main main main"
+                "sec-header sec-header sec-header"
+                "section-one section-one section-one"
+                "section-two section-two section-two"
+                "section-three section-three section-three"
+                "footer footer footer";
+            width: 100vw;
         }
 
-        .pilas-baby-img {
-            width: 280px;
-            height: 280px;
-            margin-bottom: 20px;
+        .basic-section-shop {
+            background-color: rgb(189, 189, 189);
         }
-    }
 
-    .personal-select {
-        width: 295px;
-        height: 140px;
-        margin: 10px;
-
-    }
-
-    .personal-physical {
-        display: flex;
-        align-items: flex-start;
-
-        .personal-physical-text {
-            width: 300px;
-            padding-left: 0;
-            padding-top: 150px;
+        .gold-section-shop {
+            background-color: rgb(189, 189, 189);
         }
-    }
 
-    .personal-mental-img {
-        width: 300px;
-        height: 300px;
-        margin-top: 200px;
-    }
-
-    .personal-mental {
-        flex-direction: column;
-        height: 1300px;
-        justify-content: flex-start;
-
-        .personal-mental-text {
-            width: 300px;
-            height: 300px;
-            padding-top: 20px;
-            text-align: center;
-            padding-right: 0;
+        .coder-house-img {
+            width: 0px !important;
+            height: 0px !important;
         }
-    }
 
-    .personal-expressive {
-        height: 1000px;
-        align-items: flex-start;
+        .pilas-baby {
+            height: 1050px;
 
-        .personal-expressive-text {
-            padding-left: 30px;
-            padding-top: 150px;
+            .pilas-baby-img-text {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .pilas-baby-text {
+                width: 400px;
+                padding-right: 0px;
+            }
+
+            .pilas-baby-img {
+                width: 370px;
+                height: 350px;
+            }
         }
-    }
 
-    .personal-occupational {
-        justify-content: flex-start;
-        height: 900px;
-
-        .personal-occupational-text {
-            padding-right: 0;
-            padding-top: 150px;
-            width: 300px;
-            height: 300px;
+        .about-select {
+            width: 500px;
+            height: 150px;
+            margin: 10px;
         }
-    }
 
-    .images-occupational {
+        .about-profile {
+            height: 900px;
+            justify-content: center;
+            align-items: center;
+        }
 
-        .occupational-img-two {
+        .about-profile-img {
             width: 0;
-            height: 0;
         }
 
-        .occupational-img-one {
-            width: 0
+        .contact-main-container {
+            height: 1100px;
+
+            .background-image {
+                .contact-general-info {
+                    width: 0px;
+                    height: 0px;
+
+                    .general-info {
+                        font-size: 0;
+                    }
+                }
+            }
+        }
+
+        .contact-form {
+            .contact-message {
+                margin-left: 10% !important;
+                margin-right: 10% !important;
+            }
+
+            .contact-buttons {
+                margin-left: 10%;
+            }
+
+            .container-contact-base {
+                display: flex;
+                flex-direction: column;
+                height: 90px;
+                margin-bottom: 20px;
+
+                .contact-base {
+                    width: 80%;
+                    margin-right: 10%;
+                    margin-left: 10%;
+                }
+
+                .contact-base-two {
+                    margin-left: 10%;
+                }
+            }
+        }
+
+    }
+
+    @media (max-width: 700px) {
+        .about-main-container {
+            height: 950px;
+        }
+
+        .about-container {
+            padding-top: 0px;
+            padding-bottom: 20px;
         }
     }
 
-    .contact-container {
-        width: 90% !important;
+    @media (max-width: 550px) {
+
+        .main-shop-grid {
+            .main-shop-text {
+                font-size: 2.6em !important;
+            }
+        }
+
+        .main-home-grid {
+            #home {
+                .container-home-text {
+                    width: 75%;
+                    margin-left: 20px;
+                    margin-top: 300px;
+                }
+            }
+        }
+
+        .about-proyects {
+            .container-proyect-hydro {
+                .hydro-general-content {
+                    margin: 0;
+                    width: 400px;
+                }
+            }
+        }
+
+        .container-proyect-hydro .hydro-project-one {
+            margin: 15px;
+        }
+
+        .about-text-container {
+            font-size: 0.9em;
+        }
+
+        .basic-section-shop {
+            .basic-section {
+                width: 320px;
+            }
+        }
+
+        .silver-section-shop {
+            .silver-section {
+                width: 320px;
+            }
+        }
+
+        .gold-section-shop {
+            .gold-section {
+                width: 320px;
+            }
+        }
+
+    }
+
+
+    @media (max-width: 450px) {
+
+        .container-home-grid {
+            display: grid;
+
+            width: 100vw;
+            grid-template-areas:
+                "header header header header"
+                "main main main main"
+                "footer footer footer footer"
+            ;
+        }
+
+
+        .home-text {
+            width: 50%;
+            width: 300px;
+        }
+
+        .main-home-grid {
+            .main-content {
+                .main-content-container-text {
+                    width: 80%;
+                    margin-left: 35px;
+                    margin-top: 200px;
+                }
+
+                h1 {
+                    font-size: 2.2em;
+                }
+
+                p {
+                    font-size: 0.62em;
+                }
+            }
+        }
+
+        .about-text-container {
+            font-size: 0.75em;
+        }
+
+        .about-proyects {
+            .container-proyect-hydro {
+                .hydro-general-content {
+                    margin: 0;
+                    width: 320px;
+                }
+            }
+        }
+
+        .basic-section,
+        .silver-section,
+        .gold-section {
+            width: 300px;
+        }
+
+        .courses-main {
+            h1 {
+                margin-bottom: 8px;
+            }
+
+            .btn-courses {
+                width: 105px;
+                height: 32px;
+            }
+        }
+
+        .coder-house {
+            height: 1000px;
+
+            .coder-house-text {
+                width: 290px;
+                height: 550px;
+                padding-left: 19px;
+            }
+        }
+
+        .pilas-baby {
+
+            .pilas-baby-text {
+                width: 280px;
+                padding-right: 0px;
+            }
+
+            .pilas-baby-img {
+                width: 280px;
+                height: 280px;
+                margin-bottom: 75px;
+            }
+        }
+
+        .about-select {
+            width: 295px;
+            height: 140px;
+            margin: 10px;
+
+        }
+
+        .about-profile {
+            display: flex;
+            align-items: flex-start;
+
+            .about-profile-text {
+                width: 280px;
+                padding-left: 0;
+                padding-top: 150px;
+            }
+        }
+
+        .about-proyects {
+            flex-direction: column;
+        }
+
+        .background-image {
+            .contact-container {
+                width: 90% !important;
+                margin-left: 5%;
+
+                .contact-form {
+                    .contact-textarea {
+                        .contact-message {
+                            margin-left: 10%;
+                            margin-right: 10%;
+                        }
+                    }
+
+                    .container-contact-base {
+                        .contact-base {
+                            margin-left: 10%;
+                        }
+                    }
+                }
+            }
+        }
     }
 }
