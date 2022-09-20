@@ -8,7 +8,22 @@
     background-color: transparent;
     margin: 22px;
     border-radius: 10px;
+    display: flex;
+    align-items: center;
 }
+
+%hydro-content {
+    color: black;
+    margin: 30px;
+    width: 400px;
+}
+
+%hc-hover {
+    text-decoration: none;
+    color: red;
+    font-weight: bold;
+}
+
 
 .about-main-container {
     height: 850px;
@@ -123,36 +138,24 @@
     
         .hydro-project-one {
             @include proyects;
-            display: flex;
-            align-items: center;
     
             .hydro-content {
-                color: black;
-                margin: 30px;
-                width: 400px;
+                @extend %hydro-content;
     
                 a {
-                    text-decoration: none;
-                    color: red;
-                    font-weight: bold;
+                    @extend %hc-hover;
                 }
             }
         }
     
         .hydro-project-two {
             @include proyects;
-            display: flex;
-            align-items: center;
     
             .hydro-content {
-                color: black;
-                margin: 30px;
-                width: 400px;
+                @extend %hydro-content;
     
                 a {
-                    text-decoration: none;
-                    color: red;
-                    font-weight: bold;
+                    @extend %hc-hover;
                 }
             }
         }

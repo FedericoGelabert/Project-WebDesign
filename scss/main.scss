@@ -36,7 +36,6 @@ button {
     font-size: initial;
 }
 
-
 // Key-frames
 
 
@@ -55,11 +54,11 @@ button {
 
 @keyframes navbar-absolute {
     from {
-        transform: translate(250px, 0px);
+        transform: translate(200px, 0px);
     }
 
     to {
-        transform: translate(35px, 0px);
+        transform: translate(0px, 0px);
     }
 }
 
@@ -120,12 +119,12 @@ button {
 
     .contact-textarea {
         .contact-message {
-            margin-left: 11%;
-            margin-right: 11%;
+            margin-left: 10% !important;
+            margin-right: 10% !important;
         }
     }
 
-    .background-image {
+    .contact-container-image {
         .contact-container {
             width: 55vw;
         }
@@ -133,13 +132,9 @@ button {
 
     .contact-form {
         .container-contact-base {
-            .contact-base-two {
-                margin-left: 11%;
-            }
-
             .contact-base {
-                width: 33%;
-                margin-left: 11%;
+                width: 35%;
+                margin-left: 10%;
             }
         }
     }
@@ -169,11 +164,6 @@ button {
         }
     }
 
-    .nav-link {
-        justify-content: center;
-        display: flex;
-        padding: 5px 0px;
-    }
 
     .navbar-collapse {
         position: absolute;
@@ -182,13 +172,19 @@ button {
         right: -45px;
         background-color: rgba(0, 0, 0, 0.8);
         border: 1px solid white;
-        transition: .2s;
+        transition: .5s;
         z-index: 100;
         border-radius: 15px;
-        animation-name: aparition-box;
+        animation-name: navbar-absolute;
         animation-iteration-count: 1;
         animation-duration: 1.8s;
         animation-fill-mode: forwards;
+
+        .nav-link {
+            justify-content: center;
+            display: flex;
+            padding: 5px 0px;
+        }
     }
 
     .container-proyect-hydro {
@@ -211,30 +207,25 @@ button {
             width: 0;
         }
 
-        .contact-form {
-            .container-contact-base {
-                .contact-base {
-                    width: 33%;
-                    margin-left: 11%;
-                }
-
-                .contact-base-two {
-                    width: 33%;
-                    margin-left: 11%;
-                }
-
-            }
-        }
-
         .contact-container {
             margin-left: 10vw;
+
+            .contact-form {
+                .container-contact-base {
+                    .contact-base {
+                        width: 35%;
+                        margin-left: 10%;
+                    }
+
+                }
+            }
         }
 
         .contact-main-container {
             height: 1400px;
         }
 
-        .background-image {
+        .contact-container-image {
             flex-direction: column;
             height: 600px;
 
@@ -272,11 +263,11 @@ button {
         .header {
             flex-direction: column;
             align-items: center;
+            .logo {
+                margin-top: 5px;
+            }
         }
 
-        .logo {
-            margin-top: 5px;
-        }
 
         .main-home-grid {
             .main-content {
@@ -344,26 +335,19 @@ button {
             }
         }
 
-        .about-select {
-            width: 500px;
-            height: 150px;
-            margin: 10px;
-        }
-
         .about-profile {
             height: 900px;
             justify-content: center;
             align-items: center;
-        }
-
-        .about-profile-img {
-            width: 0;
+            .about-profile-img {
+                width: 0;
+            }
         }
 
         .contact-main-container {
             height: 1100px;
 
-            .background-image {
+            .contact-container-image {
                 .contact-general-info {
                     width: 0px;
                     height: 0px;
@@ -392,13 +376,9 @@ button {
                 margin-bottom: 20px;
 
                 .contact-base {
-                    width: 80%;
-                    margin-right: 10%;
-                    margin-left: 10%;
-                }
-
-                .contact-base-two {
-                    margin-left: 10%;
+                    width: 80% !important;
+                    margin-right: 10% !important;
+                    margin-left: 10% !important;
                 }
             }
         }
@@ -409,18 +389,13 @@ button {
         .about-main-container {
             height: 950px;
         }
-
-        .about-container {
-            padding-top: 0px;
-            padding-bottom: 20px;
-        }
     }
 
     @media (max-width: 550px) {
 
         .main-shop-grid {
             .main-shop-text {
-                font-size: 2.6em !important;
+                font-size: 3em !important;
             }
         }
 
@@ -522,6 +497,12 @@ button {
             }
         }
 
+        .main-shop-grid {
+            .main-shop-text {
+                font-size: 2.6em !important;
+            }
+        }
+
         .basic-section,
         .silver-section,
         .gold-section {
@@ -585,7 +566,7 @@ button {
             flex-direction: column;
         }
 
-        .background-image {
+        .contact-container-image {
             .contact-container {
                 width: 90% !important;
                 margin-left: 5%;

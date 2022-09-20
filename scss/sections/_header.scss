@@ -1,8 +1,6 @@
 // Header
 
 
-$main-black: rgb(28, 28, 28);
-$personal-black: #111111;
 $top-red: rgb(237, 120, 120);
 
 .header {
@@ -59,7 +57,7 @@ $top-red: rgb(237, 120, 120);
             transition: 0.6s;
 
             &:hover {
-                color: rgb(237, 120, 120);
+                color: $top-red;
             }
         }
     }

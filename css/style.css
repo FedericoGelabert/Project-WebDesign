@@ -410,6 +410,16 @@
   .pilas-baby .pilas-baby-text {
     padding-right: 30px; }
 
+.about-proyects .container-proyect-hydro .hydro-project-one .hydro-content, .about-proyects .container-proyect-hydro .hydro-project-two .hydro-content {
+  color: black;
+  margin: 30px;
+  width: 400px; }
+
+.about-proyects .container-proyect-hydro .hydro-project-one .hydro-content a, .about-proyects .container-proyect-hydro .hydro-project-two .hydro-content a {
+  text-decoration: none;
+  color: red;
+  font-weight: bold; }
+
 .about-main-container {
   height: 850px;
   background-image: url(https://res.cloudinary.com/federicog/image/upload/v1663027220/my-proyect-css/index-background.jpg);
@@ -503,14 +513,6 @@
       border-radius: 10px;
       display: flex;
       align-items: center; }
-      .about-proyects .container-proyect-hydro .hydro-project-one .hydro-content {
-        color: black;
-        margin: 30px;
-        width: 400px; }
-        .about-proyects .container-proyect-hydro .hydro-project-one .hydro-content a {
-          text-decoration: none;
-          color: red;
-          font-weight: bold; }
     .about-proyects .container-proyect-hydro .hydro-project-two {
       width: 85%;
       background-color: transparent;
@@ -518,14 +520,6 @@
       border-radius: 10px;
       display: flex;
       align-items: center; }
-      .about-proyects .container-proyect-hydro .hydro-project-two .hydro-content {
-        color: black;
-        margin: 30px;
-        width: 400px; }
-        .about-proyects .container-proyect-hydro .hydro-project-two .hydro-content a {
-          text-decoration: none;
-          color: red;
-          font-weight: bold; }
 
 .contact-main-container {
   background-image: url(https://res.cloudinary.com/federicog/image/upload/v1663027220/my-proyect-css/index-background.jpg);
@@ -562,12 +556,12 @@
       .contact-main-container .contact-general-info .general-info-phone p,
       .contact-main-container .contact-general-info .general-info-location p {
         font-size: 1.2em; }
-  .contact-main-container .background-image {
+  .contact-main-container .contact-container-image {
     display: flex;
     align-items: flex-start;
     justify-content: center;
     margin-top: 80px; }
-    .contact-main-container .background-image .contact-container {
+    .contact-main-container .contact-container-image .contact-container {
       font-size: 25px;
       height: 500px;
       background-color: rgba(0, 0, 0, 0.3);
@@ -575,7 +569,7 @@
       animation-iteration-count: 1;
       animation-duration: 1.8s;
       animation-fill-mode: forwards; }
-      .contact-main-container .background-image .contact-container .contact-h1 {
+      .contact-main-container .contact-container-image .contact-container .contact-h1 {
         display: flex;
         align-items: center;
         height: 130px;
@@ -583,7 +577,7 @@
         text-shadow: black 2px 2px;
         padding-top: 0px;
         margin-left: 12%; }
-        .contact-main-container .background-image .contact-container .contact-h1 h1 {
+        .contact-main-container .contact-container-image .contact-container .contact-h1 h1 {
           font-size: 40px !important; }
 
 .contact-form .container-contact-base {
@@ -668,9 +662,9 @@ button {
 
 @keyframes navbar-absolute {
   from {
-    transform: translate(250px, 0px); }
+    transform: translate(200px, 0px); }
   to {
-    transform: translate(35px, 0px); } }
+    transform: translate(0px, 0px); } }
 
 @media (max-width: 1500px) {
   .about-select {
@@ -704,15 +698,13 @@ button {
   .gold-section {
     background-color: white; }
   .contact-textarea .contact-message {
-    margin-left: 11%;
-    margin-right: 11%; }
-  .background-image .contact-container {
+    margin-left: 10% !important;
+    margin-right: 10% !important; }
+  .contact-container-image .contact-container {
     width: 55vw; }
-  .contact-form .container-contact-base .contact-base-two {
-    margin-left: 11%; }
   .contact-form .container-contact-base .contact-base {
-    width: 33%;
-    margin-left: 11%; }
+    width: 35%;
+    margin-left: 10%; }
   .contact-general-info {
     width: 28vw !important; } }
 
@@ -725,10 +717,6 @@ button {
 @media (max-width: 992px) {
   .socialmedia-header .socialmedia {
     display: none; }
-  .nav-link {
-    justify-content: center;
-    display: flex;
-    padding: 5px 0px; }
   .navbar-collapse {
     position: absolute;
     width: 170px;
@@ -736,13 +724,17 @@ button {
     right: -45px;
     background-color: rgba(0, 0, 0, 0.8);
     border: 1px solid white;
-    transition: .2s;
+    transition: .5s;
     z-index: 100;
     border-radius: 15px;
-    animation-name: aparition-box;
+    animation-name: navbar-absolute;
     animation-iteration-count: 1;
     animation-duration: 1.8s;
     animation-fill-mode: forwards; }
+    .navbar-collapse .nav-link {
+      justify-content: center;
+      display: flex;
+      padding: 5px 0px; }
   .container-proyect-hydro .hydro-img {
     width: 0px;
     height: 0px;
@@ -753,31 +745,28 @@ button {
     font-size: 4em !important; }
   .about-profile-img {
     width: 0; }
-  .contact-form .container-contact-base .contact-base {
-    width: 33%;
-    margin-left: 11%; }
-  .contact-form .container-contact-base .contact-base-two {
-    width: 33%;
-    margin-left: 11%; }
   .contact-container {
     margin-left: 10vw; }
+    .contact-container .contact-form .container-contact-base .contact-base {
+      width: 35%;
+      margin-left: 10%; }
   .contact-main-container {
     height: 1400px; }
-  .background-image {
+  .contact-container-image {
     flex-direction: column;
     height: 600px; }
-    .background-image .contact-container {
+    .contact-container-image .contact-container {
       width: 78%; }
-    .background-image .contact-general-info {
+    .contact-container-image .contact-general-info {
       height: 210px;
       width: 78% !important;
       margin-left: 10%; }
-      .background-image .contact-general-info .general-info {
+      .contact-container-image .contact-general-info .general-info {
         display: flex;
         flex-direction: row; }
-      .background-image .contact-general-info .general-info-gmail,
-      .background-image .contact-general-info .general-info-phone,
-      .background-image .contact-general-info .general-info-location {
+      .contact-container-image .contact-general-info .general-info-gmail,
+      .contact-container-image .contact-general-info .general-info-phone,
+      .contact-container-image .contact-general-info .general-info-location {
         flex-direction: column;
         margin: 0px 30px; } }
 
@@ -787,8 +776,10 @@ button {
   .header {
     flex-direction: column;
     align-items: center; }
-  .logo {
-    margin-top: 5px; }
+    .header-home-grid .logo,
+    .header-shop-grid .logo,
+    .header .logo {
+      margin-top: 5px; }
   .main-home-grid .main-content .main-content-container-text {
     width: 75%;
     margin-left: 60px;
@@ -820,22 +811,18 @@ button {
     .pilas-baby .pilas-baby-img {
       width: 370px;
       height: 350px; }
-  .about-select {
-    width: 500px;
-    height: 150px;
-    margin: 10px; }
   .about-profile {
     height: 900px;
     justify-content: center;
     align-items: center; }
-  .about-profile-img {
-    width: 0; }
+    .about-profile .about-profile-img {
+      width: 0; }
   .contact-main-container {
     height: 1100px; }
-    .contact-main-container .background-image .contact-general-info {
+    .contact-main-container .contact-container-image .contact-general-info {
       width: 0px;
       height: 0px; }
-      .contact-main-container .background-image .contact-general-info .general-info {
+      .contact-main-container .contact-container-image .contact-general-info .general-info {
         font-size: 0; }
   .contact-form .contact-message {
     margin-left: 10% !important;
@@ -848,22 +835,17 @@ button {
     height: 90px;
     margin-bottom: 20px; }
     .contact-form .container-contact-base .contact-base {
-      width: 80%;
-      margin-right: 10%;
-      margin-left: 10%; }
-    .contact-form .container-contact-base .contact-base-two {
-      margin-left: 10%; } }
+      width: 80% !important;
+      margin-right: 10% !important;
+      margin-left: 10% !important; } }
 
 @media (max-width: 992px) and (max-width: 700px) {
   .about-main-container {
-    height: 950px; }
-  .about-container {
-    padding-top: 0px;
-    padding-bottom: 20px; } }
+    height: 950px; } }
 
 @media (max-width: 992px) and (max-width: 550px) {
   .main-shop-grid .main-shop-text {
-    font-size: 2.6em !important; }
+    font-size: 3em !important; }
   .main-home-grid #home .container-home-text {
     width: 75%;
     margin-left: 20px;
@@ -903,6 +885,8 @@ button {
   .about-proyects .container-proyect-hydro .hydro-general-content {
     margin: 0;
     width: 320px; }
+  .main-shop-grid .main-shop-text {
+    font-size: 2.6em !important; }
   .basic-section,
   .silver-section,
   .gold-section {
@@ -938,11 +922,11 @@ button {
       padding-top: 150px; }
   .about-proyects {
     flex-direction: column; }
-  .background-image .contact-container {
+  .contact-container-image .contact-container {
     width: 90% !important;
     margin-left: 5%; }
-    .background-image .contact-container .contact-form .contact-textarea .contact-message {
+    .contact-container-image .contact-container .contact-form .contact-textarea .contact-message {
       margin-left: 10%;
       margin-right: 10%; }
-    .background-image .contact-container .contact-form .container-contact-base .contact-base {
+    .contact-container-image .contact-container .contact-form .container-contact-base .contact-base {
       margin-left: 10%; } }

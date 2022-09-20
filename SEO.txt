@@ -1,0 +1,22 @@
+<strong></strong>
+
+Added '<strong></strong>' in '<h1><b>¡See the notes of these <strong>courses</strong>!</b></h1>'.
+Added '<strong></strong>' in '<h1 class="main-shop-text">Welcome to <strong>Shop</strong>!</h1>'.
+
+Keywords
+
+index.html: <meta name="keywords" content="flab, portfolio, web design, federico gelabert, web developer">
+shop.html: <meta name="keywords" content="flab, shop, service, web design, web developer, website shop">
+courses.html: <meta name="keywords" content="flab, courses, portfolio, professional, career">
+personal.html: <meta name="keywords" content="flab, personal, my life, portfolio, routine">
+contact.html: <meta name="keywords" content="flab, contact, help, ideas, work opportunity, get in touch">
+
+Description
+
+index.html: Flab is a portfolio proyect created to complete the Front End Career in CoderHouse.
+shop.html: Get a new personalized website in the next week with the Silver Option!
+courses.html: Is important get trained with good knowleadge and enthusiasm!
+personal.html: Know me more reading my notes about daily routine and achivements.
+contact.html: Don't hesitate to contact me if you're interesed in my profile.
+
+Site Map added too.
